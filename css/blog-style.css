@@ -1,0 +1,52 @@
+/******************************************************
+navigation
+********************************************************/
+body {
+ margin: 0;
+ padding: 0;
+}
+
+nav {
+  overflow: auto;
+  width: 100%;
+  background-color: rgb(107, 107, 240);
+  padding: 20px 0;
+
+}
+
+.logo {
+    width: 4.688em;
+    height: 4.688em;
+    border-radius: 4.688em;
+    float: left;
+    margin-left: 30px;
+}
+
+nav h2 {
+  float: left;
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+
+}
+
+.float-nav {
+  float: right;
+  margin-top: 15px;
+}
+
+.float-nav a {
+  min-width: 13%;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 5px solid white;
+  color: white;
+  border-radius: 7px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+main {
+  width: 80%;
+}
