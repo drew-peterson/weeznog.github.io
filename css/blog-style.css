@@ -121,12 +121,12 @@ footer {
   background-color:  rgba(66, 62, 228, 0.58);
   text-align: center;
   padding: 15px 0;
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  clear: both;
   width: 100%;
   color: white;
   font-weight: 200;
-  left: 0;
+
 }
 
 /******************************************************
