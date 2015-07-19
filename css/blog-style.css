@@ -1,11 +1,9 @@
-html {
+html, body {
   height: 100%;
   margin: 0;
 }
 
   body {
-    margin: 0;
-    height: 100%;
     background-color: rgb(227, 233, 239);
   }
 
@@ -105,14 +103,14 @@ main content
 
 main {
   font-family: Roboto;
-
+  min-height: 100%;
   width: 84%;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.85);
 }
 
 section {
-  height: 100%;
+  min-height: 100%;
   margin: 0 auto;
   width: 95%;
   padding-bottom: 20px;
@@ -142,18 +140,34 @@ section h3 {
 }
 
 
+/*bullet points*/
+section ul {
+  margin-bottom: 10px;
+}
+
+section li {
+  margin-bottom: 6px;
+}
+
+
+
 /******************************************************
-Footer
+Footer --- Footers must have a height!!!!!!!!!
 ********************************************************/
 
 footer {
   background-color:  rgba(66, 62, 228, 0.58);
-  padding: 15px 0;
-  display: block;
+  height: 50px; /*footers must have Height*/
+
+}
+
+footer p {
+  margin: 0;
   font-size: .75em;
   text-align: center;
   font-weight: 200;
   color: white;
+  line-height: 50px; /*equal to height should center text*/
 }
 
 /******************************************************
