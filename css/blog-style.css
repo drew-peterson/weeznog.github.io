@@ -1,3 +1,13 @@
+html, body {
+  height: 100%;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+* {
+  font-family: Roboto
+}
+
 /******************************************************
 navigation
 ********************************************************/
@@ -32,11 +42,12 @@ nav h2 {
 
 .float-nav {
   float: right;
-  margin-top: 15px;
+  margin-top: 13px;
 }
 
 .float-nav a {
-  min-width: 13%;
+  text-align: center;
+  min-width: 53px;
   font-size: 20px;
   text-decoration: none;
   padding: 10px 20px;
@@ -47,6 +58,81 @@ nav h2 {
   margin-right: 10px;
 }
 
+/******************************************************
+Side Buttons
+********************************************************/
+  .side-nav {
+    width: 8%;
+    background-color: rgb(227, 233, 239);
+    height: 100%;
+    display: block;
+  }
+  .side-nav a {
+    font-size: 50px;
+    text-align: center;
+    /*background-color: white;*/
+    width: 8%;
+    position: fixed;
+    top: 150px;
+    text-decoration: none;
+    padding: 200px 0;
+    color: white;
+  }
+
+  .left{
+    float: left;
+
+  }
+
+  .left a {
+    left: 0;
+  }
+
+  .right{
+    float:right;
+  }
+
+  .right a {
+    right: 14px;
+  }
+
+/******************************************************
+main content
+********************************************************/
+
+
 main {
   width: 80%;
+  margin: 0 auto;
+}
+
+
+
+/******************************************************
+Footer
+********************************************************/
+footer {
+  font-size: .75em;
+  background-color:  rgba(66, 62, 228, 0.58);
+  text-align: center;
+  padding: 15px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  font-weight: 200;
+  left: 0;
+}
+
+/******************************************************
+Hover Effects
+********************************************************/
+
+.float-nav a:hover{
+  background-color: #2bde73;
+}
+
+.side-nav a:hover {
+   color: black;
+   font-weight: bold;
 }

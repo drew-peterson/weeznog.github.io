@@ -125,14 +125,15 @@ Footer
 ********************************************************/
 footer {
   font-size: .75em;
-  border-top: 2px solid rgb(107, 107, 240);
+  background-color:  rgba(66, 62, 228, 0.58);
   text-align: center;
-  padding: 20px 0;
+  padding: 15px 0;
   position: absolute;
   bottom: 0;
   width: 100%;
-  color: rgb(107, 107, 240);
+  color: white;
   font-weight: 200;
+  left: 0;
 }
 
 /******************************************************
