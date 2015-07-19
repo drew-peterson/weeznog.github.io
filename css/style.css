@@ -91,7 +91,7 @@ Main Content
 }
 
 .row-1 {
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
 
 }
 
@@ -101,18 +101,17 @@ Circles
 
 .circle a {
   min-width: 125px;
-  min-height: auto;
+
   border-radius: 125px;
   border: 5px solid white  ;
   line-height: 125px;
-  vertical-align: center;
   display: inline-block;
   background-color: white;
   margin: 0 5px;
 
   /*Font changes*/
     text-decoration: none;
-    font-size: 3rem;
+    font-size: 3em;
     text-align: center;
     color: gray;
 
@@ -148,8 +147,4 @@ Hover changes
     background-color: white;
     color: rgb(107, 107, 240);
     font-weight: bold;
-  }
-
-   {
-    display;
   }

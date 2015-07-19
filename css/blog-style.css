@@ -6,6 +6,7 @@ html, body {
 
 * {
   font-family: Roboto
+
 }
 
 /******************************************************
@@ -25,9 +26,9 @@ nav {
 }
 
 .logo {
-    width: 4.688em;
-    height: 4.688em;
-    border-radius: 4.688em;
+    width: 75px;
+    height: 75px;
+    border-radius: 75px;
     float: left;
     margin-left: 30px;
 }
@@ -73,11 +74,16 @@ Side Buttons
     /*background-color: white;*/
     width: 8%;
     position: fixed;
-    top: 150px;
+    top: 130px;
     text-decoration: none;
     padding: 200px 0;
     color: white;
   }
+  .side-nav span {
+    font-size: 25px;
+    display: block;
+    margin: -20px;
+    }
 
   .left{
     float: left;
@@ -105,7 +111,6 @@ main {
   width: 80%;
   margin: 0 auto;
 }
-
 
 
 /******************************************************
