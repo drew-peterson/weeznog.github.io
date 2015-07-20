@@ -49,10 +49,9 @@
         <ul>
           <li>You can then move the element using specific key words (top, bottom, left, right) with a combination of lengths of measurement (px, em, %).</li>
         </ul>
-        <li>For example: you want to move a block with the class "red" 4px down and 10px right and give it a background color of blue</li>
+        <li>For example: you want to move the block with the class relative no where just to see where it lands in the work flow. See image to right ---></li>
           <ul>
-            <li>.red {position: Relative; top: 4px; left: 10px; background-color: blue;}</li>
-            <li> <b>English translation:</b>position the element with the class 'red' exactly where it would have been placed. The position the element 4px from the top of the element to its orginal location. Then position the element 10px measuring for the left side to its orignal location.
+            <li> <b>English translation:</b>for the block with the class 'c' position realtive to where it would exist in the work flow and do not move it. Notice how it is positioned in the upper left hand corner, this is exactly where it would have landed if i did not apply a position property. Also notice how the static block is placed below it. The static block represents a block without a positioning property.
           </ul>
         <li>Moving outside the containing div will not affect placement.</li>
       </ul>
@@ -61,10 +60,10 @@
       <ul>
         <li>when the positioning property is given a value of absolute. the element is taken out of normal flow and no longer affects the position of others elements. they act like they are not there.</li>
           <ul>
-            <li> Example: you want to place a div on the very right hand side of the screen and take up the entire height from top to bottom.</li>
+            <li> Example: for the block with the class c I want it to the right of both the static and relative blocks and then move it down from the top a bit.</li>
               <ul>
-                <li>div {position: absolute; right: 0; top: 0; height: 100%;}</li>
-                <li><b>English translation:</b>for the element div, take it out of the work flow, make the box start on the very upper right of the screen with no gap. Then take up the entire height.
+
+                <li><b>English translation:</b>/for the block with the class D give is a property of absolute, which will take it out of the work flow. move it from the left of the screen 190px to the right and move it from the top of the screen 40px down.
               </ul>
           </ul>
       </ul>
@@ -73,10 +72,9 @@
     <ul>
       <li>Type of absolute positiong that positions the element in relation to the browser window. Therefore, when a user scrolls down the page, it stays in the exact same place.</li>
         <ul>
-          <li>Place footer at the very bottom of screen and give it a height of 15px; and a width of 100%</li>
+          <li>example: for the block with the class B place the block at the very bottom of the screen and move it right maybe half way, when i scroll my mouse above or below the black i dont want it to move</li>
             <ul>
-              <li>footer {position: fixed; bottom: 0; width: 100%; height: 15px;}</li>
-              <li><b>English translation:</b>for the element footer, placed the element 0px from the very bottm of the screen and make sure it is always visible in the exact same place not matter if i scroll up or down. Then make it take up the entire width of the screen. Finnaly make it 15px tall.
+              <li><b>English translation:</b>for the block with the class of B give it a position of fixed, so it stay in the exact same spot on the screen. position it 0px from the bottom and from the left move it 200px to the right.
               <li>**The height will be important later if you have alot of content above it.</li>
             </ul>
         </ul>
