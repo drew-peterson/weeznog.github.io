@@ -40,7 +40,7 @@
   <h1>Hashes vs Arrays</h1>
 
   <!--Array -->
-    <article>
+    <article class = "half">
       <h3>Arrays | <small>Creating New Array</small></h3>
       <p>
         Arrays are ordered collections of objects. A common use for arrays is to group similar objects in a list and give them an ordered number starting with 0. You can create a new array by typing in the following code into your ruby text editor: <br><code>fruits = ["apple", "orange", "pear"]</code>
@@ -50,11 +50,11 @@
       <p>
         In our example above we created a new array called <code>fruits</code>. We can add more fruits to our array with the following code, here are several different ways:
         <br><code class="block">
-        fruit.push("lemon", "lime")
+        fruits.push("lemon", "lime")
         <br>&nbsp;&nbsp;&nbsp;&nbsp;=> ["apple", "orange", "pear", "lemon", "lime"]
         <br>
         <br>
-        fruit.unshift("lemon", "lime")
+        fruits.unshift("lemon", "lime")
         <br>&nbsp;&nbsp;&nbsp;&nbsp;=> ["lemon","lime","apple", "orange", "pear"]
       </code>
       </p>
@@ -63,14 +63,30 @@
       <p>
         Every value in an array is assigned an index number. in our array <code>fruits = ["apple", "orange", "pear"]</code> the value <code>"apple"</code> has a index value of 0. We can retrieve and print to the screen <code>"apple"</code> with the following code: <code>p fruits[0]</code>. To print to the screen <code>"pear"</code> we type: <code>p fruit[2]</code>
       </p>
+      <p>We can also select existing array indexs and change value held at that index by selecting the index position and setting it equal to a new value. So lets say to want to replace <code>"orange"</code> with <code>"grape"</code> we would type: <code>fruits[1] = "grape"</code>
+      </p>
     </article>
 
 <!--Hash -->
     <article>
-      <h3>Hash | Creating new Hash</h3>
+      <h3>Hash | <small>Creating new Hash</small></h3>
       <p>
-
+        Hash are similar to arrays in that they too are a ordered collection. However instead of accessing values using index positions, each value is stored in a pair, we call this a key and value pair. If we wanted to create a hash that store the name of a fruit and its color we would do that like this:
+        <br>
+        <code class = "block">
+          fruit = {
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;apple: "red",
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;orange: "orange",
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;pear: "green"
+        <br>}
+      </code>
       </p>
+
+      <h3>Hash | <small>Add key and value pairs</small></h3>
+      <p>
+        Because hashes are created in pairs, there is no real order and thus add a new pair key value pairs to an existing hash is done like this:
+      </p>
+
     </article>
 
   </section>
