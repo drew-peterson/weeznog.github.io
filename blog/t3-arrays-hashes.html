@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Blog Template</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../css/blog-style.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700,300italic' rel='stylesheet' type='text/css'>
+</head>
+
+
+   <nav>
+      <!-- logo -->
+      <img class = "logo" alt = "drew-logo" src="https://lh3.googleusercontent.com/-uwRQ833nL5g/UsxOD7K-sRI/AAAAAAAARpg/fr8pevxv6gI/w280-h280-p/e8195277-6180-4540-80bb-7744b2a005ae">
+
+      <!-- name and links -->
+        <h2>Drew Peterson</h2>
+        <div class = "float-nav">
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href = "../index.html">Home</a>
+        </div>
+    </nav>
+
+<!-- Side Buttons -->
+
+<main>
+
+ <aside class = " side-nav left">
+    <a href="../index.html"><span><br>W1</br></span> &larr;</a>
+  </aside>
+
+  <aside class = "side-nav right">
+    <a href="week-1.html"><span><br>W2</br></span>&rarr;</a>
+  </aside>
+
+<!-- end - side button -->
+
+  <section>
+
+  <h1>Hashes vs Arrays</h1>
+
+    <article>
+      <h3>Arrays | Creating New Array</h3>
+      <p>
+        Arrays are ordered collections of objects. A common use for arrays is to group similar objects in a list and give them an ordered number starting with 0. You can create a new array by typing in the following code into your ruby text editor: <br><code>fruits = ["apple", "orange", "pear"]</code>
+      </p>
+
+      <h3>Arrays | Adding objects to array</h3>
+      <p>
+        In our example above we created a new array called <code>fruits</code>. We can add more fruits to our array with the following code, here are several different ways:
+        <br><code class="block">
+        fruit.push("lemon", "lime")
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;=> ["apple", "orange", "pear", "lemon", "lime"]
+        <br>
+        <br>
+        fruit.unshift("lemon", "lime")
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;=> ["lemon","lime","apple", "orange", "pear"]
+      </code>
+      </p>
+
+      <h3>Arrays | selecting objects in array</h3>
+      <p>
+        Every value in an array is assigned an index number. in our array <code>fruits = ["apple", "orange", "pear"]</code> the value <code>"apple"</code> has a index value of 0. We can retrieve and print to the screen <code>"apple"</code> with the following code: <code>p fruits[0]</code>. To print to the screen <code>"pear"</code> we type: <code>p fruit[2]</code>
+
+      </p>
+    </article>
+
+
+
+  </section>
+
+</main>
+
+<footer>
+  <p>Drew Peterson 2015 DBC</p>
+</footer>
