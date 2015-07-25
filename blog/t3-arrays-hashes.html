@@ -26,11 +26,11 @@
 <main>
 
  <aside class = " side-nav left">
-    <a href="../index.html"><span><br>W1</br></span> &larr;</a>
+    <a href="week-2.html"><span><br>W2</br></span> &larr;</a>
   </aside>
 
   <aside class = "side-nav right">
-    <a href="week-1.html"><span><br>W2</br></span>&rarr;</a>
+    <a href="#"><span><br>W4</br></span>&rarr;</a>
   </aside>
 
 <!-- end - side button -->
@@ -40,13 +40,14 @@
   <h1>Hashes vs Arrays</h1>
 
   <!--Array -->
-    <article class = "half">
-      <h3>Arrays | <small>Creating New Array</small></h3>
+    <article class = "half-l">
+      <h3 class = "article-header">Arrays</h3>
+      <h3><small>Creating New Array</small></h3>
       <p>
         Arrays are ordered collections of objects. A common use for arrays is to group similar objects in a list and give them an ordered number starting with 0. You can create a new array by typing in the following code into your ruby text editor: <br><code>fruits = ["apple", "orange", "pear"]</code>
       </p>
 
-      <h3>Arrays | <small>Adding objects to array</small></h3>
+      <h3><small>Adding objects to array</small></h3>
       <p>
         In our example above we created a new array called <code>fruits</code>. We can add more fruits to our array with the following code, here are several different ways:
         <br><code class="block">
@@ -59,7 +60,7 @@
       </code>
       </p>
 
-      <h3>Arrays | <small>selecting objects in array</small></h3>
+      <h3><small>Selecting objects in array</small></h3>
       <p>
         Every value in an array is assigned an index number. in our array <code>fruits = ["apple", "orange", "pear"]</code> the value <code>"apple"</code> has a index value of 0. We can retrieve and print to the screen <code>"apple"</code> with the following code: <code>p fruits[0]</code>. To print to the screen <code>"pear"</code> we type: <code>p fruit[2]</code>
       </p>
@@ -68,8 +69,9 @@
     </article>
 
 <!--Hash -->
-    <article>
-      <h3>Hash | <small>Creating new Hash</small></h3>
+    <article class = "half-r">
+      <h3 class = "article-header">Hash</h3>
+      <h3><small>Creating New Hash</small></h3>
       <p>
         Hash are similar to arrays in that they too are a ordered collection. However instead of accessing values using index positions, each value is stored in a pair, we call this a key and value pair. If we wanted to create a hash that store the name of a fruit and its color we would do that like this:
         <br>
@@ -82,9 +84,34 @@
       </code>
       </p>
 
-      <h3>Hash | <small>Add key and value pairs</small></h3>
+      <h3><small>Adding Objects to Hashes</small></h3>
       <p>
-        Because hashes are created in pairs, there is no real order and thus add a new pair key value pairs to an existing hash is done like this:
+        Because hashes are created in pairs, there is no real order and thus add a new pair key value pairs to an existing hash is done like this: <code>fruit[:grape] = "purple"</code> and <code>fruit[:lemon] = "yellow"</code>.
+      </p>
+
+      <h3><small>Selecting and changing values</small></h3>
+      <p>
+      Selecting and changing Hash values is very similar to adding new key value pairs. In the <code>fruit</code> hash above we want to print to the screen the value "orange", to do this we select the key: <code>puts fruit[:orange] #=> "orange"</code>. If we want to see what the key is for a particular value we use the method <code>.key("value")</code>. So to see what key corresponds to the value <code>"green"</code> we do <code>fruit.key("green") #=> :pear</code>
+      </p>
+      <p>
+        Changing values is just like adding new values we select the key we want to change and add a new value: <code>fruit[:red] = "strawberry"</code>
+      </p>
+
+      <h3><small>Different Hash Syntax</small></h3>
+      <p>
+        For our examples above we used symbols <code>:apple</code> for our keys. Symbols are good for hashes because they are difficult to change and the syntax is easier to write. Below here is another way to create a new hash using strings and hash rockets <code>=></code>
+        <p>
+          <code class = "block">
+          <br>vegies = {
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;"lettuce" => "green",
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;"onion" => "white",
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;"eggplant" => "purple"
+        <br>}
+          </code>
+          <p>
+            To select and change hash value store using the method above you must target the key value in string form: <code>vegies["lettuce"] #=> green</code>
+          </p>
+        </p>
       </p>
 
     </article>
