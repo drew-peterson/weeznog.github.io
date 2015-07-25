@@ -122,51 +122,53 @@ section {
   margin: 0 auto;
   width: 95%;
   padding-bottom: 20px;
-  overflow: auto;
 }
 
 section h1 {
   text-align: center;
   color:rgb(107, 107, 240);
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   padding-top: 31px;
-  font-size: 2.8em;
+  font-size: 3.8em;
   font-weight: normal;
 }
 
-
-article {
-  padding: 35px 15px;
-  margin-left: 55px;
-  margin-right: 55px;
-  margin-bottom: 20px;
-  line-height: 170% ;
-  border: 5px solid #888888;
-  border-radius: 15px;
-}
-article h3 {
-  font-weight: bold;
-  font-size: 2.5em;
+/******************************************************
+TWO BIG Buttons
+********************************************************/
+section a, span {
+  display: block;
+  text-decoration: none;
   text-align: center;
+  font-size: 32px;
 }
 
-article small {
-  font-size: .75em;
-  font-weight: normal;
-  color: rgb(107, 107, 240);
-
+section a {
+  border: 10px solid #888888 ;
+  max-width: 45%;
+  padding: 40px 5px;
+  border-radius: 35px;
 }
 
-.half-l {
-  width: 35%;
+.c-button {
   float: left;
 }
-.half-r {
-  width: 35%;
+
+.t-button {
   float: right;
 }
 
+.blog-name {
+  font-size: 45px;
+  margin-bottom: 15px;
+  color: black ;
+}
+
+.blog-info {
+  color: rgb(107, 107, 240);
+  font-size: 1em;
+}
 
 
 /******************************************************
@@ -201,3 +203,8 @@ Hover Effects
    color: black;
    font-weight: bold;
 }
+
+section a:hover {
+  border: 10px solid black;
+}
+
