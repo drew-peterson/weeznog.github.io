@@ -149,6 +149,7 @@ section a {
   max-width: 45%;
   padding: 40px 5px;
   border-radius: 35px;
+  min-height: 150px;
 }
 
 .c-button {
