@@ -147,6 +147,7 @@ section a, span {
 section a {
   border: 10px solid #888888 ;
   max-width: 45%;
+  min-width: 45%;
   padding: 40px 5px;
   border-radius: 35px;
   min-height: 150px;
