@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Blog Template</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../css/blog-style.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700,300italic' rel='stylesheet' type='text/css'>
+</head>
+
+
+   <nav>
+      <!-- logo -->
+      <img class = "logo" alt = "drew-logo" src="https://lh3.googleusercontent.com/-uwRQ833nL5g/UsxOD7K-sRI/AAAAAAAARpg/fr8pevxv6gI/w280-h280-p/e8195277-6180-4540-80bb-7744b2a005ae">
+
+      <!-- name and links -->
+        <h2>Drew Peterson</h2>
+        <div class = "float-nav">
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href = "../index.html">Home</a>
+        </div>
+  </nav>
+
+<!-- Side Buttons -->
+
+<main>
+
+ <aside class = " side-nav left">
+    <a href="w3-blog-selector.html"><span><br>W3</br></span> &larr;</a>
+  </aside>
+
+  <aside class = "side-nav right">
+    <a href="#"><span><br>W5</br></span>&rarr;</a>
+  </aside>
+
+<!-- end of side button -->
+
+  <section>
+
+  <h1>Enumerables</h1>
+
+  <!-- remove the class "half-l if you want full column..." -->
+    <article>
+      <h3 class = "article-header">group_by</h3>
+      <h3><small>what is an enumerator?</small></h3>
+      <p>
+        Enumerator is a term used to describe a grouping of methods whose jobs is to sort, add/remove, find and alter information stored in a Collection Object. As far as I know the two most common forms of a collection objects are arrays and hashes.
+      </p>
+      <p>
+        All enumerators have the basic functioning of an <code>.each{|element|block}</code> enumerator method. The <code>.each</code> method goes 1 element at a time passing the element to the block and returning the value. lets look at an example:
+        <br><code class="block">
+          fruit = ["apple", "orange", "lime"]
+          <br>
+          <br>
+          fruit.each{|element| element.upcase!}
+          <br>#=> ["APPLE", "ORANGE", "LIME"]
+         </code>
+      </p>
+      <p>Many types of enumerator methods to accomplish different tasks however each method will in some way go 1 element at a time and do something to that element.
+      </p>
+    </article> <!-- End of article -->
+
+    <article>
+      <h3><small>Using group_by</small></h3>
+      <p>
+        <code>.group_by{|element|block}</code> is a method that can be called on collection object. Each element is passed to the block as a parameter. The block goal is to organize elements into a hash based the value returned from the block. A hash has 2 properties, keys and values. The key would be the return value from passing element to the block. The value will be an array of elements that match the key.
+      </p>
+      <p>
+        <code class = "block">
+          names = {
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;"drew" => "College",
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;"Evan" => "Highschool",
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;"Reed" => "College",
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;"Jim" => "Middle School"
+        <br>}
+        <br>
+        p names.group_by{|name, school| school}
+        <br>{
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;"College"=>[["Drew", "College"],["Reed", "College"]],
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;"HighSchool"=>[["Evan", "HighSchool"]],
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;"Middle School"=>[["Jim", "Middle School"]]
+        <br>}
+        </code>
+      </p>
+      <p>
+        <br><b>note:</b>How the keys are all the values from the previous hash and the values include the keys from the previous hash along with the values. Unfortunatly group_by takes each key, value pair and places them in their own array. We can clean this up with additonal code, but the most important thing to remeber from <code>.group_by</code> is it always returns a hash. And the key will equal the return value of the black. Value will equal an array of the entire element that match true for the return value.
+      </p>
+      <p>If you want to return 2 arrays, the 1st array containing the elements that return <code>True</code> for the block, and everything else in the 2nd array, check out <code>partition</code>.
+      </p>
+    </article>
+
+
+
+
+  </section> <!-- End of Section -->
+
+
+
+
+</main>
+
+<footer>
+  <p>Drew Peterson 2015 DBC</p>
+</footer>
+
+
+<!-- Code snippets
+
+   <code class = "block">
+          <br>vegies = {
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;"lettuce" => "green",
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;"onion" => "white",
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;"eggplant" => "purple"
+        <br>}
+          </code>
+
+Work flow
+
+<article>
+  <h3>Main Title 1 per group</h3>
+  <h3><small>Sub Title</small></h3>
+  <p>
+    <code></code>
+  <p>
+
+</article>
+
+
+
+ -->
