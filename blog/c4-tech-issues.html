@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Blog Template</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../css/blog-style.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700,300italic' rel='stylesheet' type='text/css'>
+</head>
+
+
+   <nav>
+      <!-- logo -->
+      <img class = "logo" alt = "drew-logo" src="https://lh3.googleusercontent.com/-uwRQ833nL5g/UsxOD7K-sRI/AAAAAAAARpg/fr8pevxv6gI/w280-h280-p/e8195277-6180-4540-80bb-7744b2a005ae">
+
+      <!-- name and links -->
+        <h2>Drew Peterson</h2>
+        <div class = "float-nav">
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href = "../index.html">Home</a>
+        </div>
+  </nav>
+
+<!-- Side Buttons -->
+
+<main>
+
+ <aside class = " side-nav left">
+    <a href="../selector/w3-blog-selector.html"><span><br>W3</br></span> &larr;</a>
+  </aside>
+
+  <aside class = "side-nav right">
+    <a href="#"><span><br>W5</br></span>&rarr;</a>
+  </aside>
+
+<!-- end of side button -->
+
+  <section>
+
+  <h1>What is Web Acessibility?</h1>
+
+  <!-- remove the class "half-1 if you want full column..." -->
+
+    <article>
+      <h3><small>Web Accessibility and the people it effects</small></h3>
+      <p>
+        When your considering how to best design a website it is important to think about designing with web accessibility in mind. When I think about the individual that web accessibility affects I immediately consider people with visual or motor impairments. People with visual and motor impairments often have programs called screen readers to help interpret websites. However web accessible content should also focus on being easy to understand, read and use. When you start designing your website, making sure it's user friendly will make the website easier to use for both the visually and tech impaired individuals.
+      </p>
+    </article> <!-- End of article -->
+
+     <article>
+      <h3><small>What are screen readers?</small></h3>
+      <p>
+        Screens readers are programs that interpret the website and output speech when combined with specific keystrokes or mouse movements. There different ways screen readers can provide audio user interfaces, the two most common types are linearization and content skimmers. linearization is referring to going one item by a time with audio readouts at each item. Skimmers are more advanced forms of navigation that can be programed to look for specific website tags such as links, buttons, headers, navigation, paragraphs etc. The user would specify how they want to navigate the page and then continue to skip from link to link or header to header so they can navigate quickly to the information they want.
+      </p>
+    </article> <!-- End of article -->
+
+      <article>
+      <h3><small>What are the stumbling points for screen readers?</small></h3>
+      <p>
+        Because users of screen readers rely on audio feedback its important that your website has meaningful text. Here are several examples of stumbling points for screen readers.
+        <ol>
+          <li>
+            When a screen reader comes across an image, its not going to describe the image but look for alternative text to read out to the user. When the alternative text is not available the screen reader has no idea what that image is about.
+          </li>
+          <li>
+            When creating a new account you are often asked for your name, email, and password before you can create your new account. When you see the label "email", you understand the website wants your email address. Screen readers look for specific tags, they do not consider what appears close to the box they want specific label,alt or id tags so they know what the forum box is point to. If tags are not present, the screen reader will not give the proper feedback to the user.
+          </li>
+          <li>
+            Finally just imagine that html headers are used as paragraphs or do not exist at all. If a user is scimming a website using header tags, and none exist or they are not used properly the user will lose all sense of website heirachy.
+
+          </li>
+        </ol>
+      </p>
+    </article> <!-- End of article -->
+
+    <article>
+      <h3><small>Quick solutions to ensure your website is web accessible</small></h3>
+      <p>
+        If you dont cut corners from the beginning your website should be web accessible however there are several items to consider when making a website:
+        <ol>
+          <li>Make sure text is large enough and has high contrast against the background</li>
+          <li>Use proper HTML5 element syntax and make sure to utilze different levels of h1-h6 header types</li>
+          <li>Properly format tables and forums with there corresponding headers,lables and id's</li>
+          <li>All links should include alternative meaninful text</li>
+          <li> If you are using visual plugin or content, make sure there is a alternative text version to represent the information</li>
+        </ol>
+      </p>
+
+    </article>
+
+    <article>
+      <h3><small>Sources</small></h3>
+        <ul>
+          <li><a href="http://webaim.org/techniques/screenreader/" alt="screen reader techniques"> Content Linearization and Skimming</a></li>
+          <li><a href="http://desarrolloweb.dlsi.ua.es/web-accessibility/comparison-common-web-accessibility-problems#section-05" alt="Screen Readers - Problems and Solutions">Screen Readers - Problems and Solutions</a></li>
+          <li><a href="http://www.lighthouse.org/accessibility/design/web/">Accesibiltiy GuideLines</a>
+          </li>
+       </ul>
+    </article>
+
+
+
+
+
+  </section> <!-- End of Section -->
+
+</main>
+
+<footer>
+  <p>Drew Peterson 2015 DBC</p>
+</footer>
+
+
+<!-- Code snippets
+
+   <code class = "block">
+          <br>vegies = {
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;"lettuce" => "green",
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;"onion" => "white",
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;"eggplant" => "purple"
+        <br>}
+          </code>
+
+Work flow
+
+<article>
+  <h3>Main Title 1 per group</h3>
+  <h3><small>Sub Title</small></h3>
+  <p>
+    <code></code>
+  <p>
+
+</article>
+
+
+
+ -->
