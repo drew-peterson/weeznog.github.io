@@ -190,6 +190,31 @@ article small {
   float: right;
 }
 
+/******************************************************
+Tables
+********************************************************/
+  table {
+    margin: 0 auto;
+    font-size: 2em;
+    border-collapse: collapse;
+  }
+
+
+  .even {
+    background-color: ;
+  }
+
+  td {
+    border-bottom: 3px solid DodgerBlue;
+    padding: 20px;
+  }
+
+  td:last-child {
+    padding-left: 100px;
+    color: LightSlateGray;
+  }
+
+
 
 /******************************************************
 Code snippets
@@ -245,4 +270,8 @@ Hover Effects
 .side-nav a:hover {
    color: black;
    font-weight: bold;
+}
+
+td:last-child:hover {
+  color: black;
 }
