@@ -1,11 +1,13 @@
 * {
   font-family: Roboto
 
+
 }
 
 html, body {
   height: 100%;
   margin: 0;
+
 
 }
   body {
@@ -106,7 +108,7 @@ main {
   font-family: Roboto;
   width: 100%;
   background-color: lime;
-  height: 400px;
+  height: 35%;
 
   text-align: center;
 }
@@ -138,9 +140,10 @@ font-size: 3em;
 Footer --- Footers must have a height!!!!!!!!!
 ********************************************************/
 
+/*How do I do this better...*/
 footer {
   position: absolute;
-  bottom: 0;
+  top: 135%; /*height of main + 100%*/
   background-color:  black;/*rgba(66, 62, 228, 0.58);*/
   height: 50px; /*footers must have Height*/
   width: 100%;
