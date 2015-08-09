@@ -95,20 +95,55 @@ class Lamp
 
     <article class = half-r>
       <h3 class = "article-header">Talkin about it</h3>
-      <h3><small>Lamp Class</small></h3>
+      <h3><small>Setting up our Lamp Class</small></h3>
       <p>
-        <code>.group_by{|element|block}</code> is a method that can be called on collection object. Each element is passed to the block as a parameter. The block goal is to organize elements into a hash based the value returned from the block. A hash has 2 properties, keys and values. The key would be the return value from passing element to the block. The value will be an array of elements that match the key.
-      </p>
-
-      <p>
-        <br><b>note:</b>How the keys are all the values from the previous hash and the values include the keys from the previous hash along with the values. Unfortunatly group_by takes each key, value pair and places them in their own array. We can clean this up with additonal code, but the most important thing to remeber from <code>.group_by</code> is it always returns a hash. And the key will equal the return value of the black. Value will equal an array of the entire element that match true for the return value.
-      </p>
-      <p>If you want to return 2 arrays, the 1st array containing the elements that return <code>True</code> for the block, and everything else in the 2nd array, check out <code>partition</code>.
+        <ul>
+          <li>
+            <b>Instance Variable:</b> commonly seen w/ a <code>@var_name</code> notation, an instance variable exists within a single instance of the class and is shared by all instance methods. This differs from a local variable that only exists at the scope it is declared unless passed along as an argument.
+            </li>
+            <li>
+              <b>initialize method:</b> special method that can be used inside a Class. When you create a new instance of a class with <code>lamp = Lamp.new(args..)</code> the instance method will run automatically, so it a good idea to set up all your variables and collections to be used by the class.
+            </li>
+            <p>
+              <b>Check out the initialize method to the left - </b> Notice the syntax of how we created the intialized method. We define it with initialize and have pass 2 arguments to it, Watts and shade_style. If you scroll down to the bottom of the class you will see a line that says <code>lamp = Lamp.new(50,"square"</code> the 50 is pointing to the watts and the "square" is pointing to shade_style. Since we are creating a lamp class, what do most lamps have that make them lamps?
+              <li>lighbulb with a watts : <code>@watts</code></li>
+              <li>a lamp shade which takes on some form or another : <code>@shade_style</code></li>
+              So 50 and square become too instance variables that make up our lamp class. We see the aruments being passed in from creating the lamp class converted into instance variables with these lines of code <code>@watts = watts</code>, <code>@shade_style = shade_style</code>
+            </p>
+            <p>
+              Inside our intialize method your will also notice we have 3 additional instance varirables being created.
+            </p>
+            <li>
+              <code>@light_span = rand(1..5)</code>
+              <ul><li>Every light bulb has a different amout of uses until it stops working. This variable creates a random number between 1 and 5. We dont know when the light will break, but we do know it will break someday. <code>@light_span</code> holds the value of how many times the light can be turned on and off until it breaks.</li></ul>
+            </li>
+            <li><code>@wear_and_tear = 0</code>
+              <ul>
+                <li>This variable acts as a counter. Everytime you turn off the lamp, wear_and_tear goes up by 1. Just like in real life, everytime you use something you are adding wear and tear on that object. When <code>@wear_and_tear == @light_span</code> the lamp breaks and we have to replace it.</li></ul>
+            </li>
+            <li><code>@powered = false</code>
+              <ul><li>Can you turn a light on if its already on? <b>NOPE...</b> In our instance method we will use this variable to check to see if the lamp is already ON or OFF. Powered is referring to YES its ON when it equals true</li></ul>
+            </li>
+        </ul>
       </p>
     </article>
 
+    <article style = "clear: both;">
+      <h3><small>Using Instance Methods</small></h3>
+      <p>
+        <ul>
+          <b><li>def on</li></b>
+            <ul>
+              <li>test</li>
+            </ul>
 
+          <b><li>def off</li></b>
+            <ul>
+          <b><li>def broken_light</li></b>
+        </ul>
 
+      </p>
+    </article>
 
   </section> <!-- End of Section -->
 
