@@ -132,16 +132,19 @@ class Lamp
       <h3><small>Using Instance Methods</small></h3>
       <p>
         <ul>
-          <b><li>def on</li></b>
-            <ul>
-              <li>test</li>
-            </ul>
+          <b><li>def on :</b> This instance method will run when we want to turn the lamp on. You notice we have a check here : <code>if @powered == true; puts "its already on"</code>. We talked about @powered before, this check will ensure that if the lamp is already on <code>@powered = true</code> then we cannot turn the lamp on. If the Lamp is not on, the check will fail and everthing under else will run. Because we are turning the lamp from off to on <code>@powered</code> now <code>= true</code>.
+          </li>
 
-          <b><li>def off</li></b>
-            <ul>
-          <b><li>def broken_light</li></b>
+          <b><li>def off :</b> This instance method runs identially to <code>def on</code> except its talking about turning the lamp OFF. We have a check, which checks to see if <code>@powered == false</code>, or is the lamp currently turned off. If its ON, <code>@powered == flase</code>, light is turned off. However will will also notice under this line we have <code>broken_light</code>. If you scroll down alittle bit more you will see we have a method called <code>def broken_light</code>. Calling a method inside another method means that when <code>def off</code> is called, at the very end it will automatically class the method <code>def broken_light</code>.
+          </li>
+
+          <b><li>def broken_light :</b> Broken light a method I am using to check when the lamp will finally break. The first line <code>@wear_and_tear += 1</code> adds a 1 to the variable. Just like in the real word, when you use something you add wear_and_tear on that object. The next line <code>if @light_span == @wear_and_tear</code> is another boolean check. Again we never know when our light is going to break. @light_span was set to a random number in our intialize method. When the wear and tear finally catches up to the light span the lamp will break. When the lamp breaks we get alittle message giving some details.
+          <br> An Important thing to note is that we can use instance variables inside another method. We created @watts in the intialize method, but we are able to use that variable here inside broken_light. Like the definition of instance variables says, instance variables are shared among all instance methods.
+          </li>
         </ul>
-
+      </p>
+      <p>
+        At the very bottom of the written class we see <code>lamp.on</code>. So the line before it creates a new instance of the lamp class and calls in lamp. <code>lamp.on</code> is calling the <code>def on</code> method or turning the lamp on. We then use <code>lamp.off</code> to turn the lamp off. when we try to turn the lamp on when its already on, we get our little message "its already on". If you run this in your code a few times you will eventally find a lamp_span that breaks only after one cycle. If the @light_span = 5, you would have to add <code>lamp.on... lamp.off</code> 5 times before it breaks.
       </p>
     </article>
 
