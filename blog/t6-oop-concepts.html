@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Blog Template</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../css/blog-style.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700,300italic' rel='stylesheet' type='text/css'>
+</head>
+
+
+   <nav>
+      <!-- logo -->
+      <img class = "logo" alt = "drew-logo" src="https://lh3.googleusercontent.com/-uwRQ833nL5g/UsxOD7K-sRI/AAAAAAAARpg/fr8pevxv6gI/w280-h280-p/e8195277-6180-4540-80bb-7744b2a005ae">
+
+      <!-- name and links -->
+        <h2>Drew Peterson</h2>
+        <div class = "float-nav">
+          <a href="../about.html">About</a>
+          <a href="../contact.html">Contact</a>
+          <a href = "../index.html">Home</a>
+        </div>
+  </nav>
+
+<!-- Side Buttons -->
+
+<main>
+
+ <aside class = " side-nav left">
+    <a href="../selector/w5-blog-selector.html"><span><br>W5</br></span> &larr;</a>
+  </aside>
+
+  <aside class = "side-nav right">
+    <a href="#"><span><br>W7</br></span>&rarr;</a>
+  </aside>
+
+<!-- end of side button -->
+
+  <section>
+
+  <h1>Modules VS Classes</h1>
+
+  <!-- remove the class "half-l if you want full column..." -->
+    <article class = half-l>
+      <h3 class = "article-header">Classes</h3>
+      <h3><small>Creating</small></h3>
+      <p>
+        text here...
+      </p>
+    </article> <!-- End of article -->
+
+    <article class = half-r>
+      <h3 class = "article-header">Modules</h3>
+      <h3><small>Creating</small></h3>
+      <p>
+        <ul>
+          <li>
+            <b>Instance Variable:</b> commonly seen w/ a <code>@var_name</code> notation, an instance variable exists within a single instance of the class and is shared by all instance methods. This differs from a local variable that only exists at the scope it is declared unless passed along as an argument.
+            </li>
+            <li>
+              <b>initialize method:</b> special method that can be used inside a Class. When you create a new instance of a class with <code>lamp = Lamp.new(args..)</code> the instance method will run automatically, so it a good idea to set up all your variables and collections to be used by the class.
+            </li>
+            <p>
+              <b>Check out the initialize method to the left - </b> Notice the syntax of how we created the intialized method. We define it with initialize and have pass 2 arguments to it, Watts and shade_style. If you scroll down to the bottom of the class you will see a line that says <code>lamp = Lamp.new(50,"square"</code> the 50 is pointing to the watts and the "square" is pointing to shade_style. Since we are creating a lamp class, what do most lamps have that make them lamps?
+              <li>lighbulb with a watts : <code>@watts</code></li>
+              <li>a lamp shade which takes on some form or another : <code>@shade_style</code></li>
+              So 50 and square become too instance variables that make up our lamp class. We see the aruments being passed in from creating the lamp class converted into instance variables with these lines of code <code>@watts = watts</code>, <code>@shade_style = shade_style</code>
+            </p>
+            <p>
+              Inside our intialize method your will also notice we have 3 additional instance varirables being created.
+            </p>
+            <li>
+              <code>@light_span = rand(1..5)</code>
+              <ul><li>Every light bulb has a different amout of uses until it stops working. This variable creates a random number between 1 and 5. We dont know when the light will break, but we do know it will break someday. <code>@light_span</code> holds the value of how many times the light can be turned on and off until it breaks.</li></ul>
+            </li>
+            <li><code>@wear_and_tear = 0</code>
+              <ul>
+                <li>This variable acts as a counter. Everytime you turn off the lamp, wear_and_tear goes up by 1. Just like in real life, everytime you use something you are adding wear and tear on that object. When <code>@wear_and_tear == @light_span</code> the lamp breaks and we have to replace it.</li></ul>
+            </li>
+            <li><code>@powered = false</code>
+              <ul><li>Can you turn a light on if its already on? <b>NOPE...</b> In our instance method we will use this variable to check to see if the lamp is already ON or OFF. Powered is referring to YES its ON when it equals true</li></ul>
+            </li>
+        </ul>
+      </p>
+    </article>
+
+    <article style = "clear: both;">
+      <h3><small>Using Instance Methods</small></h3>
+      <p>
+        <ul>
+          <b><li>def on :</b> This instance method will run when we want to turn the lamp on. You notice we have a check here : <code>if @powered == true; puts "its already on"</code>. We talked about @powered before, this check will ensure that if the lamp is already on <code>@powered = true</code> then we cannot turn the lamp on. If the Lamp is not on, the check will fail and everthing under else will run. Because we are turning the lamp from off to on <code>@powered</code> now <code>= true</code>.
+          </li>
+
+          <b><li>def off :</b> This instance method runs identially to <code>def on</code> except its talking about turning the lamp OFF. We have a check, which checks to see if <code>@powered == false</code>, or is the lamp currently turned off. If its ON, <code>@powered == flase</code>, light is turned off. However will will also notice under this line we have <code>broken_light</code>. If you scroll down alittle bit more you will see we have a method called <code>def broken_light</code>. Calling a method inside another method means that when <code>def off</code> is called, at the very end it will automatically class the method <code>def broken_light</code>.
+          </li>
+
+          <b><li>def broken_light :</b> Broken light a method I am using to check when the lamp will finally break. The first line <code>@wear_and_tear += 1</code> adds a 1 to the variable. Just like in the real word, when you use something you add wear_and_tear on that object. The next line <code>if @light_span == @wear_and_tear</code> is another boolean check. Again we never know when our light is going to break. @light_span was set to a random number in our intialize method. When the wear and tear finally catches up to the light span the lamp will break. When the lamp breaks we get alittle message giving some details.
+          <br> An Important thing to note is that we can use instance variables inside another method. We created @watts in the intialize method, but we are able to use that variable here inside broken_light. Like the definition of instance variables says, instance variables are shared among all instance methods.
+          </li>
+        </ul>
+      </p>
+      <p>
+        At the very bottom of the written class we see <code>lamp.on</code>. So the line before it creates a new instance of the lamp class and calls in lamp. <code>lamp.on</code> is calling the <code>def on</code> method or turning the lamp on. We then use <code>lamp.off</code> to turn the lamp off. when we try to turn the lamp on when its already on, we get our little message "its already on". If you run this in your code a few times you will eventally find a lamp_span that breaks only after one cycle. If the @light_span = 5, you would have to add <code>lamp.on... lamp.off</code> 5 times before it breaks.
+      </p>
+    </article>
+
+  </section> <!-- End of Section -->
+
+
+
+
+</main>
+
+<footer>
+  <p>Drew Peterson 2015 DBC</p>
+</footer>
+
+
+<!-- Code snippets
+
+   <code class = "block">
+          <br>vegies = {
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;"lettuce" => "green",
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;"onion" => "white",
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;"eggplant" => "purple"
+        <br>}
+          </code>
+
+Work flow
+
+<article>
+  <h3>Main Title 1 per group</h3>
+  <h3><small>Sub Title</small></h3>
+  <p>
+    <code></code>
+  <p>
+
+</article>
+
+
+
+ -->
