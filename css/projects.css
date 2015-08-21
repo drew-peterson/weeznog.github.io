@@ -109,7 +109,7 @@ footer {
 
   position: absolute;
   bottom: 0;
-  background-color:  black;/*rgba(66, 62, 228, 0.58);*/
+  /*background-color:  black;*/
   height: 50px; /*footers must have Height*/
   width: 100%;
 
@@ -117,7 +117,7 @@ footer {
 
 footer p {
   margin: 0;
-  font-size: .75em;
+  font-size: 1em;
   text-align: center;
   font-weight: 200;
   color: white;
