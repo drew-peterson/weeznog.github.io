@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Blog Template</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../css/blog-style.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700,300italic' rel='stylesheet' type='text/css'>
+</head>
+
+
+   <nav>
+      <!-- logo -->
+      <img class = "logo" alt = "drew-logo" src="https://lh3.googleusercontent.com/-uwRQ833nL5g/UsxOD7K-sRI/AAAAAAAARpg/fr8pevxv6gI/w280-h280-p/e8195277-6180-4540-80bb-7744b2a005ae">
+
+      <!-- name and links -->
+        <h2>Drew Peterson</h2>
+        <div class = "float-nav">
+          <a href="../about.html">About</a>
+          <a href="../contact.html">Contact</a>
+          <a href = "../index.html">Home</a>
+        </div>
+  </nav>
+
+<!-- Side Buttons -->
+
+<main>
+
+ <aside class = " side-nav left">
+    <a href="../selector/w6-blog-selector.html"><span><br>W6</br></span> &larr;</a>
+  </aside>
+
+  <aside class = "side-nav right">
+    <a href="#"><span><br>W8</br></span>&rarr;</a>
+  </aside>
+
+<!-- end of side button -->
+
+  <section>
+
+  <h1>Ruby vs Javascript</h1>
+
+      <article class>
+      <h3 class = "article-header">Overall Impressions of Javascript</h3>
+      <p>
+        I though Javascript added logic and iteraction with our website. Currently we have not been introduced to this aspect of javascript yet. What we have covered so far seem to be a review of what we have learned in Ruby but with different rules and syntax. Now Javascript and Ruby as similar to many ways. They if loops, iterators, arrays, booleans, variable scopes, math and methods to name a few. While all this items operate similar to how they would in ruby, the syntax is the first thing I found different. Instead of <code>do..end</code> they have <code>{ }</code>. instead of <code>def function_name() end</code> they have <code>function name(){};</code>. I could go on and on, however today I wanted to focus on Ruby classes vs javascript constructors.
+        <br>
+        <br> I was really surprised when we ran across constructor functions early in the week. As we created them I had no idea what they were supposed to do. It was not until we printed some values to the screen that the light bulb moment came about -- "hey these similar to ruby classes..."
+      </p>
+    </article> <!-- End of article -->
+
+  <!-- remove the class "half-l if you want full column..." -->
+    <article class = half-l>
+      <h3 class = "article-header">Ruby Classes</h3>
+      <p>
+        <code class = "block">
+          class Cart
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;attr_reader :basket
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;def initialize
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@basket = [ ]
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;end
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;def add(fruit)
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;basket.push(fruit)
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;end
+          <br>end
+          <br>
+          <br>class Item
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;attr_reader :name, :qty
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;def initialize(name,qty)
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@name = name
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@qty = qty
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;end
+          <br>
+          <br>apple = Item.new("apple",3)
+          <br>milk = Item.new("milk", 1)
+          <br>cart = Cart.new
+          <br>cart.add(apple)
+           <br>cart.add(milk)
+           <br>
+           <br>p cart.basket
+           <br> #< Item:0x000000016ed6a0 @name="apple",
+           <br>@qty=3>, #< Item:0x000000016ed448 @name="milk",
+           <br>@qty=1>]
+            <br>
+            <br> p apple.name #=> "apple"
+
+        </code>
+      </p>
+    </article> <!-- End of article -->
+
+    <article class = half-r>
+      <h3 class = "article-header">Javascript Constructor function</h3>
+         <p>
+        <code class = "block">
+          function Cart(){
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;this.basket = [ ];
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;this.add = function(fruit){
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.basket.push(fruit);
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;};
+        <br>};
+
+        <br>function Item(name, qty){
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;this.name = name;
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;this.qty = qty;
+        <br>};
+        <br>
+        <br>var apple = new Item("apple",3);
+        <br>var milk = new Item("milk",1);
+        <br>var cart = new Cart()
+        <br>cart.add(apple);
+        <br>cart.add(milk);
+        <br>
+        <br>console.log(cart.basket)
+        <br>//-> [ { name: 'apple', qty: 3 }, { name: 'milk', qty: 1 } ]
+        <br>
+        <br>console.log(apple.name) //-> apple
+
+        <br><br><br><br><br><br><br><br><br>
+
+        </code>
+      </p>
+    </article>
+
+    <article style = "clear:both;">
+      <h3 class = "article-header" >Mixing</h3>
+      <p>
+
+      </p>
+    </article>
+
+  </section> <!-- End of Section -->
+
+
+
+
+</main>
+
+<footer>
+  <p>Drew Peterson 2015 DBC</p>
+</footer>
+
+
+<!-- Code snippets
+
+   <code class = "block">
+          <br>vegies = {
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;"lettuce" => "green",
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;"onion" => "white",
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;"eggplant" => "purple"
+        <br>}
+          </code>
+
+Work flow
+
+<article>
+  <h3>Main Title 1 per group</h3>
+  <h3><small>Sub Title</small></h3>
+  <p>
+    <code></code>
+  <p>
+
+</article>
+
+
+
+ -->
