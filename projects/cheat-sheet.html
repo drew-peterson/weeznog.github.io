@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+  <title>SQL Cheat Sheet</title>
+  <link rel="stylesheet" type = "text/css" href="../css/cheat-sheet.css">
+</head>
+
+<body>
+    <header>
+        <h1>SQL Cheat Sheet</h1>
+    </header>
+
+
+     <a href="../index.html" style = "background-color: blue; padding: 20px; color: white;">Home</a>
+
+    <img class = "pokemon-table" src = "https://lh3.googleusercontent.com/29Ia8pi-87evCZa5HY2KbVQ6InvPnpnINGCBXsw7cQIizT-3Y9aCw9J52nAbJeQSgeGz8ZrAEysnfPg=w2512-h1030-rw" alt = "table">
+
+
+
+<!-- 1 section per item? -->
+    <section>
+           <div class = "question">
+               for the Pokemon table select all items in column "Name" and "Type"
+        </div>
+
+         <div class = "syntax">
+                SELECT Name,Type
+            <br>FROM Pokemon;
+        </div>
+
+        <div class = "explanation">
+           use select keyword and the name of both columns you want to display. Make sure you use the table name found using .schema
+        </div>
+    </section>
+
+<!-- 1 section per item? -->
+    <section>
+           <div class = "question">
+               display the id and name for electric type pokemon. order them by pokemon id smallest to largest
+        </div>
+
+         <div class = "syntax">
+                SELECT PokemonId,Name,Type
+            <br>FROM Pokemon
+            <br>WHERE Type="Electric"
+            <br>ORDER BY PokemonId;
+        </div>
+
+        <div class = "explanation">
+           order by defaults to ascending order. Make sure you have a ';' on the very last line.
+        </div>
+    </section>
+
+                <!-- 1 section per item? -->
+    <section>
+           <div class = "question">
+              Display Pokemon name where the height is between 1 and 2 feet tall.
+        </div>
+
+         <div class = "syntax">
+                SELECT Name
+            <br>FROM Pokemon
+            <br>WHERE Height between 1 and 2;
+        </div>
+
+        <div class = "explanation">
+          - when you use between for dates, use hashes.
+           <br>- for strings you can you "word%" to find anything that starts with word.
+        </div>
+    </section>
+
+
+<!-- 1 section per item? -->
+    <section>
+           <div class = "question">
+              display all pokemon where the name ends in 'r'
+        </div>
+
+         <div class = "syntax">
+                SELECT Name
+            <br>FROM Pokemon
+            <br>WHERE Name like "%r";
+        </div>
+
+        <div class = "explanation">
+          - "%key%" : would look before and after the keyword or letter.
+          <br>- "key%" : would look for cells that start with keyword or letter.
+        </div>
+    </section>
+
+<!-- 1 section per item? -->
+    <section>
+           <div class = "question">
+             display entire table
+        </div>
+
+         <div class = "syntax">
+                SELECT *
+            <br>FROM Pokemon;
+        </div>
+
+        <div class = "explanation">
+          you can add additional filters such as order by and where...
+        </div>
+    </section>
+
+<!-- 1 section per item? -->
+    <section>
+           <div class = "question">
+             remove all pokemon where is type is Grass
+        </div>
+
+         <div class = "syntax">
+                DELETE FROM Pokemon
+            <br>WHERE Type="Grass";
+        </div>
+
+        <div class = "explanation">
+          If you want to delete another something you can include: AND ColumnName = value;
+        </div>
+    </section>
+
+
+<footer>
+    <p>Created by Amy Liao and Drew Peterson</p>
+    <p>DBC 2015</p>
+</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
