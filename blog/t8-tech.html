@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Blog Template</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../css/blog-style.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700,300italic' rel='stylesheet' type='text/css'>
+</head>
+
+
+   <nav>
+      <!-- logo -->
+      <img class = "logo" alt = "drew-logo" src="https://lh3.googleusercontent.com/-uwRQ833nL5g/UsxOD7K-sRI/AAAAAAAARpg/fr8pevxv6gI/w280-h280-p/e8195277-6180-4540-80bb-7744b2a005ae">
+
+      <!-- name and links -->
+        <h2>Drew Peterson</h2>
+        <div class = "float-nav">
+          <a href="../about.html">About</a>
+          <a href="../contact.html">Contact</a>
+          <a href = "../index.html">Home</a>
+        </div>
+  </nav>
+
+<!-- Side Buttons -->
+
+<main>
+
+ <aside class = " side-nav left">
+    <a href="../selector/w6-blog-selector.html"><span><br>W6</br></span> &larr;</a>
+  </aside>
+
+  <aside class = "side-nav right">
+    <a href="#"><span><br>W8</br></span>&rarr;</a>
+  </aside>
+
+<!-- end of side button -->
+
+  <section>
+
+  <h1>Test Driven Development</h1>
+
+      <article class>
+      <h3><small>What is Testing in Ruby?</small></h3>
+      <p>
+        Testing in ruby or programming is just like any other form of testing, check to see if you do X you get the expected results Y. We write ruby code to acheive a purpose to complete a goal. Lets say we wanted to make a programe that takes any 2 numbers and adds them together:
+        <code class = "block">
+          def add (a,b)
+          <br>&nbsp;&nbsp;&nbsp;&nbsp; a + b
+          <br>end
+          <br>
+          <br>p add(1,2)
+        </code>
+        We would expect that running the above code would print to the screen the number 3. So <code>p add(1,2)</code> was a mini test, with numbers 1 and 2 the results should be 3. But what if you needed to add 2 different numbers together 100 times. when all the results are printed to the screen, can you keep track of what was added and what the proper result would be? I certainly could not...
+      </p>
+      <p>
+        if you are glancing at a list of numbers such as <code>1,234,56,7675,234,1,2,3</code>. Think of these as the results of adding 2 numbers together several times and these are the results. Are these the correct answers, well you could go through the code and look but wouldnt this: <code>true true true true true false true true</code> be a better return alternative. So we immeditaly see that the 6th example failed and then we could look at the 6th call of the function <code>p add(x,y)</code>
+      </p>
+      <p>
+        The above is kinda hard to picture possibly without writting and printing to the screen a bunch of times. But the take away should be, when testing code it should return true or false.
+      </p>
+    </article> <!-- End of article -->
+
+    <article>
+      <h3><small>writting tests that return true or false</small></h3>
+      <p>
+        using the code above as the function we want to run lets create a test that will return true or false.
+        <code class = "block">
+          puts "test 1: "
+          <br>puts add(2,2) == 4
+          <br>puts add(1,2) == 4
+          <br>
+          <br>###### Console #####
+          <br>test 1:
+          <br>true
+          <br>false
+        </code>
+        We can use the equality symbol <code>==</code> to return a <code>true..false</code> value.
+      </p>
+      <p>
+        we can of course set up a more automated test that uses random numbers and checks for specific numbers using built in math, however for the basic understanding of ruby tests this is a good place to start.
+      </p>
+    </article>
+
+    <article>
+      <h3><small>Ok then what is test driven development</small></h3>
+      <p>Test driven development is the idea of writing tests first that return true or false based on what you think your code should return before you even write the code. by writting a serious of tests before you even write 1 line of code, you can check to see how your code is progressing as you write it. You type out a few lines.... run the test is returns false, you know your code is not working up to snuff yet.
+      </p>
+      <p>
+        <b>lets do another example:</b> let says we want to now create a function that substracts 2 numbers and returns the results. If we want to apply test driven development, we should start by writting somes tests.
+
+        <code class = "block">
+          subtraction test 1:
+          <br>puts subtraction(6,2) == 4 #this should be true
+          <br>puts subtraction(6,2) == 3 #this should be false
+        </code>
+
+        because we know basic math we know that 3 - 1 is 2 and 3-1 is not 5. With these tests in mind we can know start writting the function.
+
+        <code class = "block">
+          def subtraction(num1, num2)
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;num1 / num2
+          <br>end
+        </code>
+        ok now lets run it...
+         <code class = "block">
+          subtraction test 1:
+          <br>false
+          <br>true
+         </code>
+         Ok why did the first one fail and the 2nd one return true??? well if we look at the code we would see that we made a mistake. Instead of <code>num1 - num2</code> we did <code>num1 / num2</code> so <code>6 / 2</code> would not return 4 however <code>6 / 2</code> does return 3 so that is why the first test faild and the secound one did not.
+      </p>
+      <p>
+        <b>Why do we use test drive development?</b> to catch mistakes that we make in our code, before its too late. if we made the above code more complex and added some functions that rely on the answer returned from subtracation, how would we ever narrow down the error quickly? If you start with a test, and run often, as long as your tests are correct. You can code with cofidence knowing that you can quickly check to see if you are doing the correct thing.
+      </p>
+      <h3><small>Do chefs taste as they go?</small></h3>
+      <p>I would says <b>yes</b> so its the same things, test your code as you go... And using test driven development ensures that your code should be better and full of less mistakes.</p>
+
+    </article>
+
+  </section> <!-- End of Section -->
+
+</main>
+
+<footer>
+  <p>Drew Peterson 2015 DBC</p>
+</footer>
+
+
+<!-- Code snippets
+
+   <code class = "block">
+          <br>vegies = {
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;"lettuce" => "green",
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;"onion" => "white",
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;"eggplant" => "purple"
+        <br>}
+          </code>
+
+Work flow
+
+<article>
+  <h3>Main Title 1 per group</h3>
+  <h3><small>Sub Title</small></h3>
+  <p>
+    <code></code>
+  <p>
+
+</article>
+
+
+
+ -->
